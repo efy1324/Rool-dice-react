@@ -1,0 +1,18 @@
+import React from 'react';
+import Dice from './Dice';
+
+
+class Dices extends React.Component{
+  state = {  } 
+  // function that taking 
+  render() { 
+    return (
+      <div>
+       <Dice/>
+       <Dice/>
+      </div>
+    );
+  }
+}
+ 
+export default Dices;
