@@ -2,17 +2,23 @@ import React from 'react';
 import Dice from './Dice';
 
 
-class Dices extends React.Component{
-  state = {  } 
-  // function that taking 
-  render() { 
+class Dices extends React.Component {
+  state = { dice1: null, dice2: null }
+  numbers = [1, 2, 3, 4, 5, 6];
+  numberso = [1, 2, 3, 4, 5, 6];
+  rollDice = (numbers, numberso) => {
+    const choosenNum = Math.floor(Math.random(numbers) * 6) + 1
+    const choosenNum1 = Math.floor(Math.random(numberso) * 6) + 1
+    this.setState({ dice1: choosenNum, dice2: choosenNum1 });
+  }
+  render() {
     return (
       <div>
-       <Dice/>
-       <Dice/>
+        <Dice />
+        <Dice />
       </div>
     );
   }
 }
- 
+
 export default Dices;

@@ -1,18 +1,19 @@
 import React from 'react';
-
+import './input.css'
 
 
 class InputNum extends React.Component {
-  state = { userInput: "20" }
+  state = { userInput: 100}
   onInputChange = (e) => {
-    console.log(1);
-    this.setState({ userInput: e.target.value }, ()=> {console.log(this.state)});
+    this.setState({ userInput: e.target.value },
+       ()=> {this.props.gettinInput(this.state.userInput)});
   }
+  
   render() {
     return (
       <>
-        <input onChange={this.onInputChange} type="text" value={this.state.userInput} />
-        {this.state.userInput}
+        <input className='inputnum' onChange={this.onInputChange} type="text" value={this.state.userInput} />
+       
       </>
     );
   }

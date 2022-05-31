@@ -1,0 +1,8 @@
+.inputnum {
+  background-color: rgb(129, 192, 28);
+  border: 2px dotted #8a2be2;
+  border-radius: 10px;
+  text-align: center;
+  width: 60%;
+  height: 5%;
+}
